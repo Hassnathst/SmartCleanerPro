@@ -1,4 +1,32 @@
 #!/bin/bash
+VERSION="1.0.0"
+UPDATE_URL="https://raw.githubusercontent.com/hassnath-tools/SmartCleanerPro/main/smart_cleaner.sh"
+SCRIPT_PATH="/usr/local/bin/cleaner"
+
+# === Handle info and update arguments ===
+if [[ "$1" == "info" ]]; then
+  echo "🧹 Smart Folder Cleaner Pro"
+  echo "Version: $VERSION"
+  echo "Script location: $SCRIPT_PATH"
+  echo "Log file: $HOME/cleaner_log.txt"
+  echo "Backups: $HOME/backups"
+  exit 0
+fi
+
+if [[ "$1" == "update" ]]; then
+  echo "🔄 Checking for updates..."
+  tmpfile="/tmp/cleaner_update.sh"
+  if curl -fsSL "$UPDATE_URL" -o "$tmpfile"; then
+      echo "✅ Downloaded new version!"
+      sudo mv "$tmpfile" "$SCRIPT_PATH"
+      sudo chmod +x "$SCRIPT_PATH"
+      echo "🚀 Cleaner updated successfully!"
+  else
+      echo "❌ Failed to download update."
+  fi
+  exit 0
+fi
+
 # === SMART FOLDER CLEANER PRO (with Backup + Safety + Colors + Animation) ===
 
 LOGFILE="$HOME/cleaner_log.txt"
