@@ -1,6 +1,6 @@
 #!/bin/bash
 VERSION="1.0.0"
-UPDATE_URL="https://raw.githubusercontent.com/hassnath-tools/SmartCleanerPro/main/smart_cleaner.sh"
+UPDATE_URL="https://github.com/Hassnathst/SmartCleanerPro/blob/main/smart_cleaner.sh"
 SCRIPT_PATH="/usr/local/bin/cleaner"
 
 # === Handle info and update arguments ===
