@@ -3,7 +3,7 @@
 
 # === Version Info ===
 VERSION="1.0.0"
-UPDATE_URL="https://raw.githubusercontent.com/hassnath-tools/SmartCleanerPro/main/smart_cleaner.sh"
+UPDATE_URL="https://github.com/Hassnathst/SmartCleanerPro/main/smart_cleaner_info.sh"
 SCRIPT_PATH="/usr/local/bin/cleaner"
 
 # === Color Codes ===
@@ -152,3 +152,4 @@ echo ""
 echo -e "${CYAN} Log saved to:${NC} $LOGFILE"
 echo -e "${CYAN} Backups stored in:${NC} $BACKUP_DIR"
 echo ""
+
